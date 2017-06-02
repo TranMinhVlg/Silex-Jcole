@@ -1,0 +1,23 @@
+{{ include('partials/header.twig') }}
+
+<h2 class="mb-4">Covers</h2>
+
+<div class="d-flex flex-wrap">
+  {% for _cover in covers %}
+  <!-- Dans le href, il faut mettre le chemin vers ta page album (au singulier)  qui ressemblerait à : crochet crochet url('album' crochet :id _cover.id crochet )  -->
+  <a href="{{ url('album', {id: _cover.id}) }}" class="card w-25 text-center">
+
+    <span class="card-header">
+      {{ _cover.album }}
+    </span>
+
+    <span class="card-block">
+      <img src="{{ _cover.image }}" alt="Cover" width="100%">
+    </span>
+
+
+
+    {% endfor %}
+    </div>
+
+  {{ include('partials/footer.twig') }}
