@@ -3,17 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <title>Jcole</title>
-    <link rel="stylesheet" href="{{ global.request.basepath }}/assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{{global.request.basepath}}/assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{global.request.basepath}}/assets/css/style.css">
 
-    <body>
+    <body id="container">
 
-     <div class="container">
 
-			<header class="navbar navbar-inverse bg-inverse mb-4">
-				<nav class="nav">
-					<a href="{{ url('home') }}" class="navbar-brand">JCOLE</a>
-					<a href="{{ url('home') }}" class="nav-item nav-link text-white">Home</a>
-					<a href="{{ url('covers') }}" class="nav-item nav-link text-white">Covers</a>
-				</nav>
-			</header>
+    
+        <a href="{{ url('home') }}">
+          <img src="{{ global.request.basepath }}../../web/assets/images/logo.png" alt="logo" class="logo"></a>
+        <nav class="nav">
+          <div class="navbar-pos">
+            <a href="{{ url('home') }}" class="zindex">home</a>
+            <a href="{{ url('covers') }}">covers</a>
+          </div>
+          <div class="border-header"></div>
+        </nav>

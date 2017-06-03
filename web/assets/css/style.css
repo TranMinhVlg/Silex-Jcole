@@ -1,0 +1,185 @@
+#container{
+  width: 100%;
+  margin: auto;
+}
+
+/* Bold */
+@font-face {
+  font-family:'proximaBold';
+  src: url(../fonts/ProximaNova/ProximaNova-Bold.otf)
+}
+
+/* Regular */
+@font-face {
+  font-family:'proximaRegular';
+  src: url(../fonts/ProximaNova/ProximaNova-Regular.otf)
+}
+
+/* Black */
+@font-face {
+  font-family:'proximaBlack';
+  src: url(../fonts/ProximaNova/ProximaNova-Black.otf)
+}
+
+/* Header */
+nav{
+  background: white;
+}
+
+.navbar-pos a{
+  margin-right: 150px;
+  padding: 5px;
+  z-index: 6;
+}
+
+a{
+  text-decoration: none;
+  color: #232323;
+  font-family: 'proximaBold';
+  font-size: 18px;
+}
+
+a:hover{
+  border-bottom: #FFB840 3.25px solid;
+  transition-duration: 0.1s;
+}
+
+.border-header{
+  width: 100%;
+  border: #f7f7f7 solid 1px;
+}
+
+.navbar-pos {
+  margin-left: 850px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  top: 100px;
+}
+
+.logo{
+  position: absolute;
+  width: 150px;
+  height: auto;
+  box-shadow: 1px 1px 25px 3px #cacaca;
+  z-index: 3;
+}
+
+
+
+/* Home */
+
+.bg-home{
+  position: relative;
+}
+
+.bg-home-img{
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+.title-jcole{
+  font-family: 'proximaBlack';
+  font-size: 160px;
+  position: absolute;
+  color: #232323;
+  top: 100px;
+  right: 120px;
+}
+
+.jcole{
+  position: absolute;
+  width: 830px;
+  z-index: 1;
+  top: 0;
+  left: 30px;
+}
+
+.description{
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-size: 20px;
+  width: 350px;
+  position: absolute;
+  top: 380px;
+  right: 120px;
+  line-height: 1.5;
+}
+
+.description span {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
+.border{
+  border: #FFB840 1.5px solid;
+}
+
+.border-pos{
+  width: 300px;
+  margin-top: 60px;
+  position: absolute;
+  right: 500px;
+}
+
+.number{
+  font-family: 'proximaBold';
+  color: #ffb74d;
+  font-size: 100px;
+  opacity: 0.12;
+  position: absolute;
+  right: 200px;
+}
+
+.title-number{
+  font-family: 'proximaBold';
+  color: #ffb74d;
+  font-size: 15px;
+  position: absolute;
+  right: 160px;
+  margin-top:48px;
+}
+
+.bg-bio{
+  background: white;
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);;
+  width: 900px;
+  height: 450px;
+  position: relative;
+  z-index: 5;
+  top: 110px;
+  margin: auto;
+}
+
+.bio{
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-size: 20px;
+  width: 650px;
+  position: absolute;
+  top: 110px;
+  left: 160px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.bg-footer-img{
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.border-footer-pos{
+  width: 600px;
+  position: absolute;
+  top: 1120px;
+  left: 0;
+}
+
+/*Covers*/
+
+
+
