@@ -280,6 +280,16 @@ a{
   text-align: justify;
 }
 
+.cover-description-1 span {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
+.cover-description-2 span {
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+}
+
 /*Titles*/
 
 .title{
@@ -296,6 +306,38 @@ a{
   margin-right: 55px;
 }
 
+/*404 Error*/
+
+.pos-404{
+  width: 100%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  margin-top: 10vh;;
+}
+
+.title-404{
+  font-family: 'proximaBold';
+  font-size: 50px;
+  color: #232323;
+  
+}
+
+.subtitle-404{
+  font-family: 'proximaRegular';
+  font-size: 20px;
+  color: #232323;
+  display: block;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.img-404{
+  width: 175px;
+  margin: auto;
+  display: block;
+  margin-top: 50px;
+}
 
 
 

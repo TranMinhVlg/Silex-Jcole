@@ -1,6 +1,6 @@
 Options -MultiViews
 
 RewriteEngine On
-RewriteBase /devoir/jcole/web/
+RewriteBase /web/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
