@@ -13,34 +13,7 @@ switch($_SERVER['HTTP_HOST'])
     $config['db_pass'] = 'root';
     break;
     
-//  case 'preppod.monsite.com':
-//    $config['debug'] = true;
-//    $config['db_host'] = '';
-//    $config['db_name'] = '';
-//    $config['db_user'] = '';
-//    $config['db_pass'] = '';
-//    break;
-    
-//  case 'monsite.com':
-//    $config['debug'] = false;
-//    $config['db_host'] = '';
-//    $config['db_name'] = '';
-//    $config['db_user'] = '';
-//    $config['db_pass'] = '';
-//    break;
-    
 }
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-use Symfony\Component\Validator\Constraints\Length;
-
-
-
-
 
 // Require dependendies
 $loader = require_once __DIR__.'/../vendor/autoload.php';
@@ -69,20 +42,7 @@ $app->register(new Silex\Provider\DoctrineServiceProvider(), array(
   ),
 ));
 $app['db']->setFetchMode(PDO::FETCH_OBJ);
-$app->register(new Silex\Provider\FormServiceProvider());
-$app->register(new Silex\Provider\TranslationServiceProvider());
-$app->register(new Silex\Provider\ValidatorServiceProvider());
-$app->register(new Silex\Provider\LocaleServiceProvider());
-$app->register(new Silex\Provider\SwiftmailerServiceProvider(), array(
-  'swiftmailer.options' => array(
-    'host'       => 'smtp.gmail.com',
-    'port'       => 465,
-    'username'   => 'smtp.hetic.p2020@gmail.com',
-    'password'   => 'heticp2020smtp',
-    'encryption' => 'ssl',
-    'auth_mode'  => 'login'
-  )
-));
+
 
 // Create routes
 $app
@@ -116,107 +76,6 @@ $app
         })
   ->bind('album');
 
-
-$app->match('/contact', function(Request $request) use($app)
-            {
-              $data = array();
-
-              $formBuilder = $app['form.factory']->createBuilder();
-
-              $formBuilder->setMethod('post');
-              $formBuilder->setAction($app['url_generator']->generate('contact'));
-
-              $formBuilder->add(
-                'name',
-                TextType::class,
-                array(
-                  'label'=> 'Your name',
-                  'trim'=> true,
-                  'required'=>true,
-                  'constraints' => array(
-                    new Length(
-                      array(
-                        'max' => 20,
-                        'min' => 3,
-                        'maxMessage' => 'Too long',
-                        'minMessage' => 'Too short',
-
-                      )
-                    )
-                  )
-                )
-              );
-
-              $formBuilder->add(
-                'email',
-                EmailType::class,
-                array(
-                  'label'=> 'Your email',
-                  'trim'=> true,
-                  'required'=>true
-                )
-              );
-
-              $formBuilder->add(
-                'subject',
-                ChoiceType::class,
-                array(
-                  'label'=> 'Subject',
-                  'required'=> true,
-                  'choices'=> array(
-                    'Informations'=>'Informations',
-                    'Proposition'=>'Proposition',
-                    'Other'=>'Other',
-                  )
-                )
-              );
-
-              $formBuilder->add(
-                'message',
-                TextareaType::class,
-                array(
-                  'label'=>'Your message',
-                  'trim'=>true,
-                  'required'=>true
-                )
-              );
-
-
-              $formBuilder->add('submit', Symfony\Component\Form\Extension\Core\Type\SubmitType::class);
-
-              $form = $formBuilder->getForm();
-
-              $form->handleRequest($request);
-
-              if($form->isSubmitted() && $form->isValid())
-              {
-                $formData = $form ->getData();
-
-                $message = new \Swift_Message();
-                $message->setSubject($formData['subject']);
-                $message->setFrom($formData['email']);
-                $message->setTo(array(''));
-                $message->setBody($formData['message']);
-
-                $app['mailer']->send($message);
-                
-                return $app->redirect($app['url_generator']->generate('contact'));
-
-
-              }
-
-              $data['contact_form'] = $form->createView();
-
-              return $app['twig']->render('pages/contact.twig', $data);
-            })
-  ->bind('contact');
-
-$app->get('/random', function() use ($app)
-          {
-            $randomId = rand(1,811);
-            $url = $app['url_generator']->generate('pokemon',array('id' => $randomId));
-            return $app->redirect($url);
-          });
 
 $app -> error(function() use($app)
               {

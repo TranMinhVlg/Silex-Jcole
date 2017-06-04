@@ -1,10 +1,10 @@
+/*Container*/
 #container{
   width: 100%;
   margin: auto;
 
 }
-
-
+/*Smooth Refresh*/ 
 @keyframes easein {
     from { opacity: 0.2; }
     to   { opacity: 1; }
@@ -69,7 +69,6 @@ a{
   box-shadow: 1px 1px 25px 3px #cacaca;
   z-index: 3;
 }
-
 
 
 /* Home */
@@ -239,7 +238,7 @@ a{
   font-family: 'proximaBlack';
   font-size: 70px;
   color: #232323;
-    animation: easein 1s;
+    animation: easein 2s;
 }
 
 .cover-size :hover{
@@ -256,7 +255,7 @@ a{
   padding-right: 10px;
   padding-left: 10px;
   transition-duration: 0.5s;
-    animation: easein 1s;
+    animation: easein 2s;
 
 }
 
@@ -372,7 +371,6 @@ a .img-404:hover{
   font-family: 'proximaBold';
   font-size: 22px;
   color: #ffb74d;
-
 }
 
 

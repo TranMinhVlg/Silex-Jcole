@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  localhost:8889
--- Généré le :  Sam 03 Juin 2017 à 10:36
+-- Généré le :  Dim 04 Juin 2017 à 20:39
 -- Version du serveur :  5.6.35
 -- Version de PHP :  7.0.15
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `covers` (
   `id` int(11) NOT NULL,
   `image` longtext NOT NULL,
-  `album` varchar(20) NOT NULL
+  `album` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `covers` (
 
 INSERT INTO `covers` (`id`, `image`, `album`) VALUES
 (1, 'http://images.genius.com/37291e01ab860f66509cc60d0f0c75bf.1000x1000x1.jpg', '4 Your Eyez Only'),
-(2, 'https://images.genius.com/7154c6dafd6f6f883c099f033a4aa5e3.1000x1000x1.jpg', 'Forest Hills Drive');
+(2, 'https://images.genius.com/7154c6dafd6f6f883c099f033a4aa5e3.1000x1000x1.jpg', '2014 Forest Hills Drive');
 
 -- --------------------------------------------------------
 
