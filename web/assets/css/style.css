@@ -1,6 +1,13 @@
 #container{
   width: 100%;
   margin: auto;
+
+}
+
+
+@keyframes easein {
+    from { opacity: 0.2; }
+    to   { opacity: 1; }
 }
 
 /* Bold */
@@ -61,11 +68,6 @@ a{
   height: auto;
   box-shadow: 1px 1px 25px 3px #cacaca;
   z-index: 3;
-  transition-duration: 0.2s;
-}
-
-.logo:hover{
-  opacity: 0.7;
 }
 
 
@@ -107,7 +109,7 @@ a{
   font-size: 20px;
   width: 350px;
   position: absolute;
-  top: 380px;
+  top: 390px;
   right: 120px;
   line-height: 1.5;
 }
@@ -171,7 +173,7 @@ a{
   width: 650px;
   position: absolute;
   top: 110px;
-  left: 160px;
+  left: 130px;
   line-height: 1.5;
   text-align: justify;
 }
@@ -236,7 +238,8 @@ a{
 .titles-covers{
   font-family: 'proximaBlack';
   font-size: 70px;
-  color: black;
+  color: #232323;
+    animation: easein 1s;
 }
 
 .cover-size :hover{
@@ -253,6 +256,7 @@ a{
   padding-right: 10px;
   padding-left: 10px;
   transition-duration: 0.5s;
+    animation: easein 1s;
 
 }
 
@@ -266,6 +270,7 @@ a{
   right: 51px;
   line-height: 1.5;
   text-align: justify;
+    animation: easein 2s;
 }
 
 .cover-description-2{
@@ -314,6 +319,7 @@ a{
   font-size: 20px;
   padding-top: 25px;
   margin-left: 50px;
+  color: #232323;
 }
 
 .duration{
@@ -321,6 +327,7 @@ a{
   font-size: 14px;
   float: right;
   margin-right: 55px;
+  color: #232323;
 }
 
 /*404 Error*/
