@@ -337,6 +337,18 @@ a{
   margin: auto;
   display: block;
   margin-top: 50px;
+  transition-duration: 0.5s;
+}
+
+a .img-404:hover{
+  opacity: 0.5;
+}
+
+.subtitle-404 span{
+  font-family: 'proximaBold';
+  font-size: 22px;
+  color: #ffb74d;
+
 }
 
 
