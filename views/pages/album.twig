@@ -1,9 +1,10 @@
 {{ include('partials/header.twig') }}
 
 {% for _song in album %}
+<div class="shape"></div>
+<div class="title">{{ _song.title }}</div>
+<div class="duration">{{ _song.duration }}</div>
 
-<h2>Duration: {{ _song.duration }}</h2>
-<h2>Titre: {{ _song.title }}</h2>
 
 {% endfor %}
 

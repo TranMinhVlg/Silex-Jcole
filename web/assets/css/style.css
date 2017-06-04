@@ -39,9 +39,8 @@ a{
   font-size: 18px;
 }
 
-a:hover{
-  border-bottom: #FFB840 3.25px solid;
-  transition-duration: 0.1s;
+.navbar-pos a:hover{
+  border-bottom: #FFB840 3px solid;
 }
 
 .border-header{
@@ -62,6 +61,11 @@ a:hover{
   height: auto;
   box-shadow: 1px 1px 25px 3px #cacaca;
   z-index: 3;
+  transition-duration: 0.2s;
+}
+
+.logo:hover{
+  opacity: 0.7;
 }
 
 
@@ -129,8 +133,13 @@ a:hover{
   color: #ffb74d;
   font-size: 100px;
   opacity: 0.12;
-  position: absolute;
+
+
+}
+
+.number-pos{
   right: 200px;
+  position: absolute;
 }
 
 .title-number{
@@ -142,9 +151,11 @@ a:hover{
   margin-top:48px;
 }
 
+
+
 .bg-bio{
   background: white;
-  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);;
+  box-shadow: 0px 0px 50px 0px rgba(0,0,0,0.1);
   width: 900px;
   height: 450px;
   position: relative;
@@ -167,7 +178,6 @@ a:hover{
 
 .bg-footer-img{
   width: 100%;
-  height: auto;
   background-repeat: no-repeat;
   position: relative;
 }
@@ -180,6 +190,113 @@ a:hover{
 }
 
 /*Covers*/
+
+.header-covers{
+  position: relative;
+  margin-top: 100px;
+  margin-left: 150px;
+}
+
+
+.title-number-pos-covers{
+  font-family: 'proximaBold';
+  color: #ffb74d;
+  font-size: 15px;
+  position: absolute;
+  left: 65px;
+  top:45px;
+}
+
+.shape{
+  width: 100%;
+  border-bottom: rgba(255,183,77,0.3) 1px solid;
+  margin-top: 30px;
+}
+
+.shape1{
+  width: 25px;
+  height: 25px;
+  background: #ffb74d;
+  margin-top:100px;
+  margin-left:10px;
+  position: absolute;
+}
+
+.shape2{
+  width: 25px;
+  height: 25px;
+  background: #ffb74d;
+  margin-top:850px;
+  margin-left:10px;
+  position: absolute;
+}
+
+
+
+.titles-covers{
+  font-family: 'proximaBlack';
+  font-size: 70px;
+  color: black;
+}
+
+.cover-size :hover{
+  opacity: 0.5;
+}
+
+.cover-size{
+  width: 500px;
+  height: 500px;
+  margin-right: 500px;
+  margin-bottom: 115px;
+  margin-left: 100px;
+  margin-top: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  transition-duration: 0.5s;
+
+}
+
+.cover-description-1{
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-size: 20px;
+  width: 617px;
+  position: absolute;
+  top: 660px;
+  right: 51px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+.cover-description-2{
+  font-family: "Source Sans Pro";
+  font-weight: 300;
+  font-size: 20px;
+  width: 617px;
+  position: absolute;
+  top: 1380px;
+  right: 51px;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/*Titles*/
+
+.title{
+  font-family: 'proximaBold';
+  font-size: 20px;
+  padding-top: 25px;
+  margin-left: 50px;
+}
+
+.duration{
+  font-family: 'proximaRegular';
+  font-size: 14px;
+  float: right;
+  margin-right: 55px;
+}
+
+
 
 
 
