@@ -1,5 +1,7 @@
 {{ include('partials/header.twig') }}
-
+<a href="{{ url('covers') }}"> 
+<div class="return">BACK TO COVERS</div>
+</a>
 {% for _song in album %}
 <div class="shape"></div>
 <div class="title">{{ _song.title }}</div>
